@@ -1,0 +1,39 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.image,image{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px #fffdef);
+}
+.h3,text{
+    text-align: 50%;
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif;
+    font-stretch: expanded;
+    text-align: center;
+    font-size: large;
+
+}
+.education-item,text{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-style: inherit;
+    font-display: auto;
+    font-variant: var();
+    background: #333;
+}
+.button,button{
+    display: block;
+    filter: drop-shadow(0 0 10px #fffdef);
+
+}
+.portfolio,.portfolio{
+    font-style: inherit;
+    text-align: center;
+    text-shadow: #333;
+    
+}
