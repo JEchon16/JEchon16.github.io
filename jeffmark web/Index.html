@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title> 
+    <link rel="stylesheet" href="prof.css">
+    <script defer src="script.js"></script>
+    <a href ="https://jechon16.github.io/" target="_blank">GitHub</a>
+    
+</head>
+<br>
+<body style="background: url('./aaa.jpg') no-repeat center center fixed; background-size: cover;">
+   
+    
+    <header>
+        <div class="logo"> <table>JEFFhub</table>   </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle">🌙</button>
+            
+            
+        </nav>
+        <body style="color: red;"></body>
+    </body>
+    <style>
+        * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+
+body {
+background-color: #f8f9fa;
+color: #333;
+transition: background 0.3s, color 0.3s;
+}
+
+
+.dark-mode {
+background-color: #222;
+color: rgba(255, 255, 255, 0.521);
+}
+
+.dark-mode section {
+background: #333;
+}
+
+.dark-mode .progress {
+background: #666;
+}
+
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+background: #333;
+color: white;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000;
+}
+
+header .logo {
+font-size: 22px;
+font-weight: bold;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+}
+
+nav ul li {
+margin: 0 15px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+}
+
+#darkModeToggle {
+background: none;
+border: none;
+color: white;
+font-size: 20px;
+cursor: pointer;
+}
+#education {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.education-item {
+    background: #ffffffa9;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.education-item p {
+    color: #666;
+}
+
+.dark-mode .education-item {
+    background: #444;
+}
+
+.dark-mode .education-item h3,
+.dark-mode .education-item p {
+    color: white;
+}
+
+section {
+padding: 80px 20px;
+max-width: 900px;
+margin: 80px auto 20px;
+background: white;
+border-radius: 5px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#about {
+display: flex;
+align-items: center;
+text-align: center;
+flex-direction: column;
+}
+
+#about img {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+margin-bottom: 15px;
+}
+
+
+.skill-bar {
+margin: 10px 0;
+}
+
+.progress {
+height: 10px;
+background: #ddd;
+width: 0;
+transition: width 1s ease-in-out;
+}
+
+
+.filters {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.filter-btn {
+padding: 10px 15px;
+margin: 5px;
+border: none;
+background: #333;
+color: white;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.filter-btn:hover {
+background: #555;
+}
+
+.projects {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.project {
+display: none;
+width: 250px;
+text-align: center;
+}
+
+.project img {
+width: 100%;
+border-radius: 5px;
+}
+
+.project.show {
+display: block;
+}
+
+.slider {
+text-align: center;
+position: relative;
+}
+
+.testimonial {
+display: none;
+font-size: 18px;
+font-style: italic;
+margin: 10px 0;
+}
+
+.testimonial.active {
+display: block;
+}
+
+
+form {
+display: flex;
+flex-direction: column;
+}
+
+input, textarea {
+padding: 10px;
+margin: 10px 0;
+width: 100%;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+button {
+padding: 10px;
+background: #333;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+
+button:hover {
+background: #555;
+}
+
+
+#backToTop {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #333;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+cursor: pointer;
+display: none;
+font-size: 16px;
+}
+
+#backToTop:hover {
+background: #555;
+}
+
+
+footer {
+text-align: center;
+padding: 20px;
+background: #333333;
+color: white;
+margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+header {
+    flex-direction: column;
+    text-align: center;
+}
+
+nav ul {
+    flex-direction: column;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+section {
+    width: 90%;
+}
+
+.projects {
+    flex-direction: column;
+}
+}
+
+        </style>
+    </header>
+<br>
+<br>
+    <section id="about">
+        <img src="mark.jpg" alt="Profile Picture">
+        <div>
+            <h3>Hi, I'm currently im 3rd yr student in Cavite State University. </h3>
+            <h4>Let me Know if u want to know more about me!</h4>
+            <h5>Just contact me. <span>JUST SCROLL AND FIND</span></h5>
+            <p></p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+            <p>HTML</p>
+            <div class="progress" data-percent="30"></div>
+        </div>
+        <div class="skill-bar">
+            <p>CSS</p>
+            <div class="progress" data-percent="30"></div>
+        </div>
+        <div class="skill-bar">
+            <p>JavaScript</p>
+            <div class="progress" data-percent="20"></div>
+        </div>
+        <div class="skill-bar">
+            <p>SQL</p>
+            <div class="progress" data-percent="20"></div>
+        </div>
+        <div class="skill-bar">
+            <p>C++</p>
+            <div class="progress" data-percent="30"></div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="filters">
+            <button class="filter-btn" data-category="all">All</button>
+            <button class="filter-btn" data-category="project">Project In C++</button>
+            <button class="filter-btn" data-category="design">Activity In C++</button>
+        </div>
+        <div class="projects">
+            <div class="project" data-category="web">
+                <img src="proj.jpg" alt="Project 1">
+                <p>Project 1 (PROJECT C++)</p>
+            </div>
+            <div class="project" data-category="design">
+                <img src="figma.jpg" alt="Project 2">
+                <p>Project 2 (FIGMA)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education Background</h2>
+        <div class="education-item">
+            <h3>[Bachelor Of Science In Informaion Technology]</h3>
+            <p>[Cavite State University(CCAT campus)]  [2025]</p>
+            <p>Still Studying. Currently 3rd Year Student</p>
+        </div>
+        <div class="education-item">
+            <h3>Tanza Trade National Highschool</h3>
+            <p>Senior High(G11) 2020-2021]</p>
+            <p>Senior High(G12)  [2021-2022]</p>
+            <p>Junio High(G10-G7) [2016-2020]</p>
+        </div>
+        <div class="education-item">
+            <h3>Paranaque Elementary School Central</h3>
+            <p>Elementary(G1-G6) [2010-2016]</p>
+            <p></p>
+        </div>
+
+  
+
+
+
+
+    
+</div>
+</section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <button id="backToTop">↑</button>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Jeffmark Echon. All rights reserved.</p>
+    </footer>
+
+    <script src="jeff.js"></script>
+</body>
+</html>
